@@ -8,7 +8,7 @@ function Form() {
 
     const Body = styled.body`
         width: 100vw;
-        height: 600px;
+        height: max-contain;
         background-image: url('${travelimg}');
         background-position: center;
         padding: 0;
@@ -30,14 +30,24 @@ function Form() {
         align-items: center;
         padding-bottom: 50px;
         border-radius: 15px;
+        margin-bottom: 100px;
+        
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+        }
     `
 
     const Article = styled.article`
-        width: 1000px;
+        width: 60vw;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
         text-align: left;
+        margin-top: 100px;
+        @media (max-width: 1024px) {
+            font-size: 20px;
+            justify-content: flex-end;
+        }
     `
 
     const H1 = styled.h1`
@@ -46,18 +56,27 @@ function Form() {
         font-weight: 900;   
         color: white;
         margin: 0;
-    `
 
-    const P = styled.p`
+        @media (max-width: 1024px) {
+            font-size: 35px;
+        }
+        `
+        
+        const P = styled.p`
         font-size: 1.3em;
         font-family: Poppins-semibold;
         font-weight: bolder; 
         color: white;
         margin-left: 20px;
+        
+        @media (max-width: 1024px) {
+                font-size: 1em;
+                margin-left: 20px;
+        }
     `
 
     const Label = styled.label`
-        width: 300px;
+        width: 20vw;
         height: 70px;
         display: flex;
         flex-direction: column;
@@ -65,39 +84,56 @@ function Form() {
         font-family: Poppins-semibold;
         font-size: 15px;
         color: #746D6D;
-        background-collor: red;
         margin-top: 30px;
+
+        @media (max-width: 1024px) {
+            font-size: 12px;
+            width: 50vw;
+        }
  
     `
 
     const Input = styled.input`
-        width: 300px;
+        width: 20vw;
         height: 35px;
         background-color: #D9D9D9;
         outline: none;
         border: 1px;
         color: #746D6D;
         font-family: Poppins-regular;
-        padding-left: 25px;
+        padding: 0px 25px;
         border-radius: 15px;
+
+        @media (max-width: 1024px) {
+            font-size: 10px;
+            width: 50vw;
+       }
     `
 
     const Select = styled.select`
-    width: 300px;
+    width: 20vw;
     height: 35px;
     background-color: #D9D9D9;
     outline: none;
     border: 1px;
     color: #746D6D;
     font-family: Poppins-regular;
-    padding-left: 25px;
+    padding: 0px 25px;
     border-radius: 15px;
+    @media (max-width: 1024px) {
+        width: 50vw;
+    }
     `
 
     const InputRange = styled.input`
         padding: 0;
-        width: 300px;
+        width: 20vw;
         height: 35px;
+
+        @media (max-width: 1024px) {
+             margin: 0;
+             width: 50vw;
+        }
     `
 
     const InputSubmit = styled.button`
@@ -116,7 +152,7 @@ function Form() {
     const Button = styled.button`
         position: absolute;
         bottom: -25px;
-        left: 45%;
+        left: 40%;
         width: 100px;
         height: 50px;
     `
@@ -143,7 +179,11 @@ function Form() {
             font-size: 20px;
             color: black;
             opacity: 0.9;
-            margin-left: 100px;
+            margin-left: 0px;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 12px;
         }
     `
 
@@ -153,6 +193,13 @@ function Form() {
     justify-content: space-around;
     width: 100%;
     margin: 0;
+
+    @media (max-width: 1024px) {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
     useEffect(() => {

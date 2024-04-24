@@ -28,10 +28,18 @@ function FilterButton() {
             justify-content: space-around;
             margin: 0;
             padding-bottom: 10px;
+
+            @media (max-width: 1024px) {
+                font-size: 12px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+        
+            }
         `
 
         const Label = styled.label`
-        width: 300px;
+        width: 20vw;
         height: 70px;
         display: flex;
         flex-direction: column;
@@ -41,23 +49,29 @@ function FilterButton() {
         color: #746D6D;
         background-collor: red;
         margin-top: 30px;
+        @media (max-width: 1024px) {
+            width: 50vw
+        }
  
     `
 
     const Input = styled.input`
-        width: 300px;
+        width: 20vw;
         height: 35px;
         background-color: #D9D9D9;
         outline: none;
         border: 1px;
         color: #746D6D;
         font-family: Poppins-regular;
-        padding-left: 25px;
+        padding: 0 25px;
         border-radius: 15px;
+        @media (max-width: 1024px) {
+            width: 50vw
+        }
     `
 
     const Select = styled.select`
-    width: 300px;
+    width: 20vw;
     height: 35px;
     background-color: #D9D9D9;
     outline: none;
@@ -66,6 +80,9 @@ function FilterButton() {
     font-family: Poppins-regular;
     padding-left: 25px;
     border-radius: 15px;
+    @media (max-width: 1024px) {
+        width: 50vw
+    }
     `
 
     return (

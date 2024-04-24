@@ -40,6 +40,11 @@ function Main() {
         font-size: 30px;
         opacity: 0.7;
         margin-top: 50px;
+
+        @media (max-width: 1024px) {
+            padding: 15px;
+            font-size: 25px;
+        }
     `
 
     const  ArrowLeft = styled(ArrowLeftIcon)`

@@ -18,6 +18,11 @@ function Footer() {
        font-family: Poppins-light;
        font-size: 20px;
        margin-top: 100px;
+
+       @media (max-width: 1024px) {
+        padding: 15px;
+        font-size: 18px;
+    }
     `
 
     return (
